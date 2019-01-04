@@ -17,7 +17,7 @@ fp.close();
 # 暗号化
 zipname = tempfile.mkstemp(suffix='zip')[1]
 os.chdir(tmpdir.name)
-pyminizip.compress(filename, zipname, 'maypassword', 0)
+pyminizip.compress(filename, '', zipname, 'maypassword', 0)
 
 # S3にアップロード
 obj = s3.Object('examplewrite19890503', filename + '.zip')
